@@ -176,3 +176,20 @@ button[type="submit"] {
     cursor: pointer;
    
 }
+
+
+.footer-section {
+    background-color: #333; /* Change as needed */
+    color: white; /* Change as needed */
+    text-align: center;
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.footer-content {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0; /* Remove default margins */
+}
