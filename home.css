@@ -1,0 +1,178 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333; /* Change as needed */
+    color: white; /* Change as needed */
+}
+
+.navbar img {
+    height: 80px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make the image circular */
+    width: 100px;
+}
+
+.navbar-buttons {
+    display: flex;
+}
+
+.navbar-buttons button {
+    margin-left: 10px; /* Adjust the spacing between buttons as needed */
+    padding: 5px 10px; /* Adjust button padding as needed */
+    background-color: #555; /* Change button background color as needed */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.about-section {
+    padding: 50px 0;
+    background-color: #f5f5f5; /* Optional: Change background color */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 50%; /* Adjust image width as needed */
+    border-radius: 50%; /* Make the image circular */
+}
+
+.about-text {
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    color: #333; /* Optional: Change text color */
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #666; /* Optional: Change text color */
+}
+
+.service-section {
+    padding: 50px 0;
+    overflow: hidden; /* Hide overflow */
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.service-card {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px 8px 0 0;
+}
+
+.service-text {
+    padding: 20px;
+}
+
+.service-text h3 {
+    font-size: 20px;
+    color: #333; /* Optional: Change text color */
+}
+
+.service-text p {
+    font-size: 16px;
+    color: #666; /* Optional: Change text color */
+}
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #f5f5f5; /* Optional: Change background color */
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the form takes up the full height of its container */
+    width: 80%;
+}
+
+
+
+.contact-form h2 {
+    font-size: 24px;
+    color: #333; /* Optional: Change text color */
+    text-align: center;
+}
+
+
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin: 20px;
+
+
+}
+
+
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #555; /* Change button background color as needed */
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+   
+}
