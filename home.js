@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", function () {
         inner.style.transform = `translateX(${offset}px)`;
     }
 
-    setInterval(moveToNextCard, 1000);
+    setInterval(moveToNextCard, 3000);
 });

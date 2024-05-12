@@ -2,33 +2,141 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #333; /* Change as needed */
+    background-color: transparent;
     color: white; /* Change as needed */
 }
 
 .navbar img {
-    height: 80px; /* Adjust the height as needed */
+    height: 100px; /* Adjust the height as needed */
     border-radius: 50%; /* Make the image circular */
     width: 100px;
 }
 
-.navbar-buttons {
-    display: flex;
-}
-
-.navbar-buttons button {
-    margin-left: 10px; /* Adjust the spacing between buttons as needed */
-    padding: 5px 10px; /* Adjust button padding as needed */
-    background-color: #555; /* Change button background color as needed */
-    border: none;
-    color: white;
+.btn_nav {
+    padding-right: 10px;
+    width: 10em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: white;
+    color: black;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-}
+    
+  }
+  
+  .btn_nav::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: white;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .btn_nav::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: white;
+    transition: 0.5s;
+  }
+  
+  .btn_nav:hover::before, .btn_nav:hover::after {
+    transform: scale(0)
+  }
+  
+  .btn_nav:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
 
+/* 
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 14px;
+  }
+  
+  a::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 12px);
+    background-color: #333;
+    transition: 0.3s ease-in-out;
+    transform: scaleY(1);
+  }
+  
+  a:hover::before {
+    transform: scaleY(0);
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% - 12px);
+    background-color: #333;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  }
+  
+  a:hover::after {
+    transform: scaleX(0);
+  }
+  
+  a span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    background-color: none;
+    text-decoration: none;
+    background-color: #333;
+    border: none;
+  } */
+
+
+/* .navbar-buttons {
+    display: flex;
+} */
+
+
+
+/* .navbar-buttons button {
+    margin-left: 10px; 
+    padding: 5px 10px; 
+    background-color: transparent; 
+    border: none;
+    color: black;
+    cursor: pointer;
+} */
 .about-section {
     padding: 50px 0;
-    background-color: #f5f5f5; /* Optional: Change background color */
+    background-color: transparent; /* Optional: Change background color */
 }
 
 .about-content {
@@ -36,29 +144,72 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
+.about-image {
+    width: 49%;
+    height: 400px;
+    text-align: center; /* Center the image horizontally */
+   
+}
+
 .about-image img {
-    width: 50%; /* Adjust image width as needed */
-    border-radius: 50%; /* Make the image circular */
+    width: 100%; 
+    height: 400px;
+    border-radius: 50%; /* Set border radius to create a circular shape */
+    border: 2px solid #ccc; /* Add grey border */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape */
 }
 
 .about-text {
-    max-width: 50%;
-    padding: 0 20px;
+    width: 50%;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(102, 102, 245); /* Start color */
+    }
+    25% {
+        color: rgb(21, 21, 108); /* Middle color */
+    }
+    50% {
+        color: rgb(21, 21, 108);  /* Middle color */
+    }
+    75% {
+        color: rgb(21, 21, 108); /* End color */
+    }
+    100% {
+        color: rgb(102, 102, 245); /* Start color */
+    }
 }
 
 .about-text h2 {
     font-size: 24px;
-    color: #333; /* Optional: Change text color */
+    text-transform: uppercase; /* Convert text to uppercase */
+    margin-bottom: 10px; /* Add some space below the heading */
+    text-decoration: underline; /* Add underline decoration */
+    animation: colorChange 5s infinite; /* Apply the animation */
 }
 
+
 .about-text p {
-    font-size: 16px;
+    color: #666; /* Optional: Change text color */
+    background-color: transparent; /* Add background color */
+    padding: 15px; /* Add padding */
+    border-left: 5px solid #3498db; /* Add left border */
+    margin-top: 20px; /* Add margin at the top */
+}
+.phrase {
+    display: block;
+    margin-bottom: 20px; /* Add margin between phrases */
+    font-size: 18px;
     color: #666; /* Optional: Change text color */
 }
+
+
+
 
 .service-section {
     padding: 50px 0;
@@ -82,6 +233,9 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+    display: flex; /* Add display flex */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 .service-card:hover {
@@ -90,13 +244,15 @@
 }
 
 .service-card img {
-    width: 80px;
-    height: 60px;
+    width: 140px;
+    height: 100px;
     border-radius: 8px 8px 0 0;
+    margin-top: 10px; /* Add margin to space the image from the top */
 }
 
 .service-text {
     padding: 20px;
+    text-align: center;
 }
 
 .service-text h3 {
@@ -105,36 +261,104 @@
 }
 
 .service-text p {
-    font-size: 16px;
+    font-size: 18px;
     color: #666; /* Optional: Change text color */
+    padding: 15px; /* Add padding */
+    border-radius: 8px; /* Add border radius */
+    margin-top: 10px; /* Add margin at the top */
+    text-align:center; /* Align text */
 }
+
+
+
+
+
+.team-section {
+    padding: 50px 0;
+    background-color: transparent; /* Optional: Change background color */
+}
+
+.team-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title_sec{
+    font-size: 40px; /* Increase font size */
+    text-align: center; /* Center-align */
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 20px; /* Add some space below */
+
+}
+
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between cards */
+}
+
+.team-card {
+    width: calc(25% - 20px); /* Adjust card width */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow:  6px 4px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+   
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Round the top corners */
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.team-info h3 {
+    font-size: 18px;
+    color: #8db5ff; /* Optional: Change text color */
+}
+
+
+
+
+
+
+
+
+
 
 .contact-section {
     padding: 50px 0;
-    background-color: #f5f5f5; /* Optional: Change background color */
+    background-color: #f5f5f5;
 }
 
 .contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 30px;
+    color: #333;
 }
 
 .contact-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure the form takes up the full height of its container */
-    width: 80%;
+    margin-top: 20px;
+    text-align: center; /* Center-align the form */
 }
 
-
-
-.contact-form h2 {
-    font-size: 24px;
-    color: #333; /* Optional: Change text color */
-    text-align: center;
-}
 
 
 
@@ -144,17 +368,20 @@
 }
 
 .form-group {
-    margin: 20px;
-
-
+    width: calc(48% - 10px);
+    text-align: left; /* Reset text-align for individual form groups */
+    margin: 10px; /* Center the form group */
 }
-
 
 
 .form-group label {
     display: block;
+    margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
+    font-size: 18px; /* Adjust font size */
 }
+
 
 .form-group input,
 .form-group textarea {
@@ -162,20 +389,58 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Add margin bottom for spacing between input fields */
+    padding-right: 10px;
 }
 
 .form-group textarea {
-    height: 100px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Add margin bottom for spacing between input fields */
+    padding-right: 50px;
+    text-align: center; /* Center the input of the textarea */
 }
 
-button[type="submit"] {
-    background-color: #555; /* Change button background color as needed */
+
+/* .btn_send {
+    background-color: #555;
     border: none;
     color: white;
-    padding: 10px 40px;
+    padding: 12px 30px;
     cursor: pointer;
-   
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
+
+.btn_send:hover {
+    background-color: #333;
+} */
+
+
+.btn {
+    width: 120px;
+    height: 40px;
+    border: 3px solid #315cfd;
+    border-radius: 45px;
+    transition: all 0.6s;
+    cursor: pointer;
+    background: white;
+    font-size: 1em;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .btn:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1.2em;
+  }
+  
 
 
 .footer-section {
