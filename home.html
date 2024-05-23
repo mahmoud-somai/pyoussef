@@ -159,7 +159,7 @@
                 </div>
                 <div class="project-card">
                     <video controls>
-                        <source src="video6.mp4" type="video/mp4">
+                        <source src="v4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="project-info">
@@ -211,7 +211,7 @@
 
     
 
-    <sectio id="contact-section" class="contact-section">
+    <section id="contact-section" class="contact-section">
         <div class="contact-content">
             <h2>Contact Us</h2>
             <div class="contact-form">
@@ -242,11 +242,11 @@
                             <textarea id="message" placeholder="Message" name="message" rows="4" required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn">SEND</button>
+                    <button type="submit" id="sendemail" class="btn">SEND</button>
                 </form>
             </div>
         </div>
-    </sectio>
+    </section>
     
     
     
@@ -257,5 +257,40 @@
     </footer>
     
     <script src="home.js"></script> 
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+        let cred={
+            firstname:"",
+            lastname:"",
+            email:"",
+            phone:"",
+            message:"",
+           
+        }
+    
+        let firstname=document.querySelector("#firstname")
+        let lastname=document.querySelector("#lastname")
+        let phone=document.querySelector("#phone")
+        let email=document.querySelector("#email")
+        let message=document.querySelector("#message")
+        let sendemail=document.querySelector("#sendemail")
+        sendemail.addEventListener('click',async ()=>{
+            try {
+                cred.firstname=firstname.value
+                cred.email=email.value
+                cred.phone=phone.value
+                cred.lastname=lastname.value
+                cred.message=message.value
+                await emailjs.send('service_ao3psul', "template_gxypl4r", cred, "9GX4YqoYLwFCf2xjQ");
+                alert("email sended with success");
+            } catch (error) {
+                console.log(error);
+            }
+    
+        })
+    
+        </script>
 </body>
 </html>
