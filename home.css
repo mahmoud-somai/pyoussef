@@ -1,3 +1,13 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('./712059_Abstract_background_15.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -205,7 +215,7 @@ a {
     display: block;
     margin-bottom: 20px; /* Add margin between phrases */
     font-size: 18px;
-    color: #666; /* Optional: Change text color */
+    color: #fff; /* Optional: Change text color */
 }
 
 
@@ -271,64 +281,65 @@ a {
 
 
 
-
-
 .team-section {
-    padding: 50px 0;
-    background-color: transparent; /* Optional: Change background color */
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
 .team-content {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.title_sec{
-    font-size: 40px; /* Increase font size */
-    text-align: center; /* Center-align */
-    margin-top: 0; /* Remove default margin */
-    margin-bottom: 20px; /* Add some space below */
-
+.title_sec {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
 }
-
 
 .team-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center;
+    gap: 20px;
 }
 
 .team-card {
-    width: calc(25% - 20px); /* Adjust card width */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow:  6px 4px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-   
+    width: 280px; /* Set a fixed width for the cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
 }
 
 .team-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px 8px 0 0; /* Round the top corners */
+    width: 100%; /* Make the image take up the full width of the card */
+    height: 300px; /* Set a fixed height for the image */
+    object-fit:fill; /* Ensure the image covers the space without distortion */
 }
 
 .team-info {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    flex-grow: 1; /* Ensure the team-info section takes up remaining space */
 }
 
 .team-info h2 {
-    font-size: 22px;
-    margin-bottom: 5px;
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+    color: #333;
 }
 
 .team-info h3 {
-    font-size: 18px;
-    color: #8db5ff; /* Optional: Change text color */
+    font-size: 1em;
+    margin: 0;
+    color: #777;
 }
-
 
 
 
@@ -356,55 +367,51 @@ a {
 
 .contact-form {
     margin-top: 20px;
-    text-align: center; /* Center-align the form */
+    text-align: center;
 }
-
-
-
 
 .form-row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Add space between rows */
 }
 
 .form-group {
-    width: calc(48% - 10px);
-    text-align: left; /* Reset text-align for individual form groups */
-    margin: 10px; /* Center the form group */
+    width: calc(50% - 25px); /* Two form groups per row with margin adjustment */
+    margin:  10px; /* Adjust margins for consistent spacing */
+    text-align: left;
 }
 
+.form-group-full {
+    width: 100%;
+    margin: 0 10px; /* Adjust margins for consistent spacing */
+    text-align: left;
+}
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
-    font-size: 18px; /* Adjust font size */
+    font-size: 18px;
 }
-
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 16px;
-    margin-bottom: 10px; /* Add margin bottom for spacing between input fields */
-    padding-right: 10px;
+    margin-bottom: 10px;
+    
 }
 
 .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 10px; /* Add margin bottom for spacing between input fields */
-    padding-right: 50px;
-    text-align: center; /* Center the input of the textarea */
+    height: 100px; /* Set a fixed height for the textarea */
+   
 }
-
 
 /* .btn_send {
     background-color: #555;
