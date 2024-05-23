@@ -36,3 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(moveToNextCard, 3000);
 });
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    var navbar = document.querySelector('.navbar');
+    if (prevScrollpos > currentScrollPos) {
+        navbar.classList.remove('opaque');
+        navbar.classList.add('transparent');
+    } else {
+        navbar.classList.remove('transparent');
+        navbar.classList.add('opaque');
+    }
+    prevScrollpos = currentScrollPos;
+}
+
