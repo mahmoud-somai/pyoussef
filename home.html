@@ -10,7 +10,7 @@
     <nav>
         <div class="navbar">
             <div class="navbar-left ">
-                <img src="./logo final1.png" alt="Logo">
+                <img href="#" src="./lgfinal.png" alt="Logo">
             </div>
             <div class="navbar-buttons">
                 <a href="#about-section" class="btn_nav"> About US</a>
@@ -26,7 +26,7 @@
     <section id="about-section" class="about-section">
         <div class="about-content">
             <div class="about-image">
-                <img src="./logo final1.png" alt="About Us Image">
+                <img src="./lgfinal.png" alt="About Us Image">
             </div>
             <div class="about-text">
                 <h2>ABOUT US</h2>
@@ -161,9 +161,23 @@
                     </video>
                     <div class="project-info">
                         <h3>Project 6</h3>
-                        
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="image-slider">
+                        <div class="slides">
+                            <img src="pia.jpg" alt="Project 7">
+                            <img src="iaaff.jpeg" alt="Project 8">
+                            <img src="iaaff2.jpeg" alt="Project 9">
+                        </div>
+                        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projects 7, 8, 9</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -212,7 +226,7 @@
         <div class="contact-content">
             <h2>Contact Us</h2>
             <div class="contact-form">
-                <form id="contact-form">
+                <form id="contact-form" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstname">Prénom :</label>

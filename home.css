@@ -31,9 +31,9 @@ body {
 }
 
 .navbar img {
-    height: 100px; /* Adjust the height as needed */
+    height: 110px; /* Adjust the height as needed */
     border-radius: 50%; /* Make the image circular */
-    width: 100px;
+    width: 150px;
 }
 
 .btn_nav {
@@ -186,7 +186,7 @@ a {
     height: 400px;
     border-radius: 50%; /* Set border radius to create a circular shape */
     border: 2px solid #ccc; /* Add grey border */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape */
+   border: none;
 }
 
 .about-text {
@@ -501,6 +501,41 @@ form{
 
 
 
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 
 
 
@@ -562,4 +597,10 @@ form{
 .project-info p {
     font-size: 16px;
     color: #666;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
