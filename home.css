@@ -23,10 +23,14 @@ body {
 }
 
 .btn_nav {
-    padding-right: 10px;
-    width: 10em;
+    display: inline-block;
+    padding: 5px 5px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    width: 9em;
     position: relative;
-    height: 2.5em;
+    height: 1.5em;
     border: 3px ridge #149CEA;
     outline: none;
     background-color: rgba(255, 255, 255, 0.562);
@@ -36,8 +40,8 @@ body {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    
-  }
+}
+
   
   .btn_nav::after {
     content: "";
@@ -179,7 +183,7 @@ a {
 
 @keyframes colorChange {
     0% {
-        color: rgb(102, 102, 245); /* Start color */
+        color: rgb(56, 56, 204); /* Start color */
     }
     25% {
         color: rgb(21, 21, 108); /* Middle color */
@@ -191,7 +195,7 @@ a {
         color: rgb(21, 21, 108); /* End color */
     }
     100% {
-        color: rgb(102, 102, 245); /* Start color */
+        color: rgb(56, 56, 204); /* Start color */
     }
 }
 
@@ -224,6 +228,12 @@ a {
 .service-section {
     padding: 50px 0;
     overflow: hidden; /* Hide overflow */
+}
+
+.title_service{
+    text-align: center;
+    font-size: 28px;
+    color: black;
 }
 
 .carousel {
@@ -485,7 +495,7 @@ form{
 
 .projects-section {
     padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid white;
     border-radius: 10px;
     max-width: 1200px;
@@ -513,7 +523,7 @@ form{
 .project-card {
     width: calc(33.333% - 20px);
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
