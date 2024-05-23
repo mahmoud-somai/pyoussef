@@ -29,7 +29,7 @@ body {
     height: 2.5em;
     border: 3px ridge #149CEA;
     outline: none;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.562);
     color: black;
     transition: 1s;
     border-radius: 0.3em;
@@ -46,7 +46,7 @@ body {
     left: 3%;
     width: 95%;
     height: 40%;
-    background-color: white;
+  
     transition: 0.5s;
     transform-origin: center;
   }
@@ -59,7 +59,7 @@ body {
     left: 3%;
     width: 95%;
     height: 40%;
-    background-color: white;
+   
     transition: 0.5s;
   }
   
@@ -68,7 +68,7 @@ body {
   }
   
   .btn_nav:hover {
-    box-shadow: inset 0px 0px 25px #1479EA;
+    box-shadow: inset 0px 0px 25px #14c3ea;
   }
 
 /* 
@@ -238,7 +238,7 @@ a {
 .service-card {
     flex: 0 0 calc(33.33% - 20px);
     margin: 0 10px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -306,7 +306,7 @@ a {
 }
 
 .team-card {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -352,13 +352,18 @@ a {
 .contact-section {
     padding: 50px 0;
     background-color: transparent;
+
+    
 }
 
 .contact-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    border: 2px solid white;
 }
+    
+
 
 .contact-content h2 {
     font-size: 30px;
@@ -393,8 +398,13 @@ a {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+    color: black;
     font-size: 18px;
+}
+
+form{
+    width: 97%;
+    height: 480px;
 }
 
 .form-group input,
@@ -464,4 +474,70 @@ a {
 
 .footer-content p {
     margin: 0; /* Remove default margins */
+}
+
+
+
+
+
+
+
+
+.projects-section {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.projects-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title_sec {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.projects-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.project-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #666;
 }
